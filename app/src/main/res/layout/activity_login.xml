@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+
+    <ImageView
+        android:id="@+id/LoginDetailsBox"
+        android:layout_width="724dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="80dp"
+        android:foregroundGravity="center"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/common_google_signin_btn_text_dark_disabled" />
+
+    <TextView
+        android:id="@+id/LoginLabel"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="160dp"
+        android:text="Log in"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FirstNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="16dp"
+        android:text="First Name"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginLabel" />
+
+    <TextView
+        android:id="@+id/LastNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="22dp"
+        android:text="Last Name"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameLabel" />
+
+    <TextView
+        android:id="@+id/DateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="22dp"
+        android:text="Date"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LastNameLabel" />
+
+    <EditText
+        android:id="@+id/FirstNameField"
+        android:layout_width="426dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="234dp"
+        android:background="@drawable/textview_bordered"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/FirstNameLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/LastNameField"
+        android:layout_width="426dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_bordered"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/LastNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameField" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="160dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="638dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Log In"
+        android:textAppearance="@android:style/TextAppearance.Material.Widget.ActionBar.Menu"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateField" />
+
+    <TextView
+        android:id="@+id/DateField"
+        android:layout_width="426dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview_bordered"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/DateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/LastNameField" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="147dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="16dp"
+        android:text="Systems Alliance Inc."
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/applogo"
+        android:layout_width="317dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blastqa_logo" />
+
+</android.support.constraint.ConstraintLayout>

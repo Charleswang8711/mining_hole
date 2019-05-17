@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qaqc_bg"
+    android:padding="10dp"
+    tools:context=".QAQCActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/GraphView"
+        android:layout_width="978dp"
+        android:layout_height="548dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:padding="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/StartButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/StartButton"
+        android:layout_width="190dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="24dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/startsequence" />
+
+    <Button
+        android:id="@+id/ShowParametersButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="10dp"
+        android:text="Display Parameters"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ClearSelectionButton" />
+
+    <Button
+        android:id="@+id/ClearSelectionButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="10dp"
+        android:text="Clear Selection"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ExitSaveButton" />
+
+    <Button
+        android:id="@+id/ExitSaveButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="10dp"
+        android:text="Save and Exit"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/AddHoleButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:padding="10dp"
+        android:text="Add Hole"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ShowParametersButton" />
+
+    <ImageView
+        android:id="@+id/CompassSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/compass" />
+
+</android.support.constraint.ConstraintLayout>

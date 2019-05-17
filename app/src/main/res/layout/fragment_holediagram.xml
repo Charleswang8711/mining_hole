@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="402dp"
+    android:layout_height="382dp"
+    android:background="@drawable/hole_diagram_bg">
+
+        <TextView
+            android:id="@+id/SurfaceRL"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:text="260.0 mRL"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TargetRL"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="228dp"
+            android:text="250.0 mRL"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SurfaceRL" />
+
+        <TextView
+            android:id="@+id/SubDrill"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="214dp"
+            android:layout_marginEnd="45dp"
+            android:text="1.2m Sub"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StemmingColumn" />
+
+        <TextView
+            android:id="@+id/StemmingColumn"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="36dp"
+            android:text="3.3m Stem"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

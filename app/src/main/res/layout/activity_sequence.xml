@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".SequenceActivity">
+
+    <EditText
+        android:id="@+id/ImportantNotesValue"
+        android:layout_width="382dp"
+        android:layout_height="121dp"
+        android:layout_marginEnd="127dp"
+        android:background="@drawable/textview_bordered_black"
+        android:gravity="top|left"
+        android:imeOptions="actionDone"
+        android:inputType="textImeMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImportantNoteLabel" />
+
+    <TextView
+        android:id="@+id/ImportantNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="378dp"
+        android:text="Important Notes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HoleDiagram" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="351dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/IDLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hole ID"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/IDValue"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:editable="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DesignDiameterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design Diameter (mm)"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/DesignDiameterValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:editable="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:id="@+id/DesignDepthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design Depth (m)"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/DesignDepthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:editable="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:id="@+id/DesignDipAngleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design Dip Angle (degrees)"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/DesignDipAngleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:editable="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:id="@+id/ActualDiameterLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual Diameter (mm)"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ActualDiameterValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="18sp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:id="@+id/ActualDepthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual Depth (m)"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ActualDepthValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="211dp">
+
+            <TextView
+                android:id="@+id/ActualDipAngleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual Dip Angle (degrees)"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ActualDipAngleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="211dp">
+
+            <TextView
+                android:id="@+id/CollarPipeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collar Pipe (m)"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/CollarPipeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="18sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <fragment
+        android:id="@+id/HoleDiagram"
+        android:name="miningsolutions.BlastQA.HoleDiagramFragment"
+        android:layout_width="402dp"
+        android:layout_height="384dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_holediagram" />
+
+    <TextView
+        android:id="@+id/RedrillRequiredLabel"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:text="Redrill Required"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MoreButton" />
+
+    <TextView
+        android:id="@+id/RedrillRequiredValue"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/RedrillRequiredLabel"
+        app:layout_constraintTop_toBottomOf="@+id/MoreButton" />
+
+    <Button
+        android:id="@+id/ValidationColor"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="114dp"
+        app:layout_constraintStart_toEndOf="@+id/RedrillRequiredValue"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/ReturnMapButton"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="25dp"
+        android:text="Return to Map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/NextButton"
+        app:layout_constraintStart_toEndOf="@+id/PreviousButton" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="184dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Next Hole / Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/QuickMapButton" />
+
+    <Button
+        android:id="@+id/PreviousButton"
+        android:layout_width="184dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Previous Hole"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/SequenceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="507dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:text="Sequence No."
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SequenceCurrentId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/SequenceLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SequenceLabelSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:text="of"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/SequenceCurrentId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/SequenceTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/SequenceLabelSeparator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/MoreButton"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="55dp"
+        android:text="More..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/QuickMapButton"
+        android:layout_width="209dp"
+        android:layout_height="84dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Quick Map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TableLayout
+        android:id="@+id/QuickButtons"
+        android:layout_width="100dp"
+        android:layout_height="385dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/Row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Row5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/OverrideRedrill"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="39dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Override For Redrill"
+        app:layout_constraintBottom_toTopOf="@+id/ValidationColor"
+        app:layout_constraintEnd_toStartOf="@+id/HoleDiagram"
+        app:layout_constraintStart_toEndOf="@+id/MoreButton"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/WetHoleButton"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Set As Wet Hole"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BrokenGroundButton" />
+
+    <Button
+        android:id="@+id/NoHoleButton"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Set As No Hole"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WetHoleButton" />
+
+    <Button
+        android:id="@+id/BrokenGroundButton"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Set As Broken Ground"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OverrideRedrill" />
+
+</android.support.constraint.ConstraintLayout>

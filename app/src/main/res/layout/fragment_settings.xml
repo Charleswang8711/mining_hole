@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="150dp"
         android:text="Inputs"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -67,7 +67,7 @@
         android:id="@+id/DataTypeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="100dp"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
@@ -114,5 +114,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/AddCustomData"
         app:layout_constraintTop_toBottomOf="@+id/SettingsList" />
+
+    <Button
+        android:id="@+id/CheckSettingsBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="View/Output Settings"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/PatternsLocationValue"
+        app:layout_constraintStart_toStartOf="@+id/PatternsLocationValue"
+        app:layout_constraintTop_toBottomOf="@+id/PatternsLocationValue" />
+
+    <Button
+        android:id="@+id/Close"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/OpenLocationButton"
+        app:layout_constraintStart_toStartOf="@+id/OpenLocationButton"
+        app:layout_constraintTop_toTopOf="@+id/RemoveCustomData" />
 
 </android.support.constraint.ConstraintLayout>

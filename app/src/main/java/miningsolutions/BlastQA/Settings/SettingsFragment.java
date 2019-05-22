@@ -30,11 +30,16 @@ public class SettingsFragment extends DialogFragment {
     public RecyclerView settingsList;
     public RecyclerView.LayoutManager layoutManager;
     public SettingsAdapter mAdapter;
+    public Button viewOutputSettings;
     public Button addCustomData;
     public Button removeCustomData;
 
+    public Button closeBtn;
+
+
     FragmentManager fm;
     AddCustomDataFragment addCustomDataFragment;
+    ViewAndOutputSettingFragment viewAndOutputSettingFragment;
 
     int REQUEST_CODE_SELECTLOCATION = 201; // Default Request Code for ACTION_OPEN_DOCUMENT_TREE. Do not change.
 
@@ -58,11 +63,16 @@ public class SettingsFragment extends DialogFragment {
         settingsList = (RecyclerView) view.findViewById(R.id.SettingsList);
         settingsList.setHasFixedSize(true);
 
+        viewOutputSettings = (Button) view.findViewById(R.id.CheckSettingsBtn);
         addCustomData = (Button) view.findViewById(R.id.AddCustomData);
         removeCustomData = (Button) view.findViewById(R.id.RemoveCustomData);
+        closeBtn = view.findViewById(R.id.Close);
 
         fm = getActivity().getSupportFragmentManager();
         addCustomDataFragment = new AddCustomDataFragment();
+        addCustomDataFragment.setCancelable(false);
+        viewAndOutputSettingFragment = new ViewAndOutputSettingFragment();
+        viewAndOutputSettingFragment.setCancelable(false);
 
         // Specify layout manager for the list
         layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
@@ -88,6 +98,15 @@ public class SettingsFragment extends DialogFragment {
             }
         });
 
+        viewOutputSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                viewAndOutputSettingFragment.show(fm, "fragment_viewandoutputsettings");
+
+            }
+        });
+
         addCustomData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,8 +122,14 @@ public class SettingsFragment extends DialogFragment {
                     appData.removeCustomData(appData.getSelectedPosition());
                 }
                 mAdapter.notifyDataSetChanged();
+
             }
         });
+
+
+        closeBtn.setOnClickListener((view1) ->{
+
+            this.dismiss();});
 
     }
 

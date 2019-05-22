@@ -88,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
 
         settingsFragment = new SettingsFragment();
 
+        settingsFragment.setCancelable(false);
+
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
